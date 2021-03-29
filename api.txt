@@ -1,0 +1,24 @@
+/**往表里面插数据（表不存在则新建）*/
+POST 172.20.10.11:9500/api   // addData
+
+{
+	"tablename": "",   //tableName
+	"object": {}
+}
+
+/** 获取数据库中所有表的表名*/
+GET 172.20.10.11:9500/api/getTables  //getTables
+
+/**删除指定表*/
+DELETE 172.20.10.11:9500/api/dropTables?tableName=ps4   //deleteTable
+
+
+/**返回指定表中所有数据*/
+GET 172.20.10.11:9500/api/getAllData?tableName=ps4   //getTableData
+
+/**返回指定表中某条数据*/
+GET 172.20.10.11:9500/api/getData?tableName=ps4&id=342323242   //getData
+
+/**删除指定表中指定数据*/
+DELETE 172.20.10.11:9500/api/deleteData?tableName=ps4&id=342323242   // deleteData
+
